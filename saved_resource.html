@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3-%2D5173-%2D017acfb7.local-credentialless.webcontainer-api.io/ -->
+<html lang="en" class="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--017acfb7.local-credentialless.webcontainer-api.io/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlPlane.ai — Inline Runtime Proxy &amp; Observability for Enterprise LLMs</title>
+    <meta name="description" content="ControlPlane.ai — Inline runtime proxy, observability, and governance for enterprise LLM deployments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./css2(1)" rel="stylesheet">
+  <style type="text/css" data-vite-dev-id="/home/project/src/index.css">*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: JetBrains Mono, ui-monospace, SFMono-Regular, monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+  :root {
+    color-scheme: dark;
+  }
+  * {
+    border-color: #27272a;
+  }
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 9 11 / var(--tw-bg-opacity, 1));
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+  .light body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity, 1));
+}
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1));
+  background-clip: padding-box;
+}
+  ::-webkit-scrollbar-thumb:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 63 70 / var(--tw-bg-opacity, 1));
+}
+  .light ::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 216 / var(--tw-bg-opacity, 1));
+}
+.surface {
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(39 39 42 / var(--tw-border-opacity, 1));
+  background-color: rgb(24 24 27 / 0.6);
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.light .surface {
+  --tw-border-opacity: 1;
+  border-color: rgb(228 228 231 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.surface-2 {
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(39 39 42 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
+}
+.light .surface-2 {
+  --tw-border-opacity: 1;
+  border-color: rgb(228 228 231 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.card-hover {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+.card-hover:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(63 63 70 / var(--tw-border-opacity, 1));
+}
+.light .card-hover:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 212 216 / var(--tw-border-opacity, 1));
+}
+.input-base {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(39 39 42 / var(--tw-border-opacity, 1));
+  background-color: rgb(9 9 11 / 0.5);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+}
+.input-base::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-placeholder-opacity, 1));
+}
+.input-base::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-placeholder-opacity, 1));
+}
+.input-base {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.input-base:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 91 / var(--tw-border-opacity, 1));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.light .input-base {
+  --tw-border-opacity: 1;
+  border-color: rgb(228 228 231 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity, 1));
+}
+.light .input-base::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-placeholder-opacity, 1));
+}
+.light .input-base::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-placeholder-opacity, 1));
+}
+.light .input-base:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(161 161 170 / var(--tw-border-opacity, 1));
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+.pointer-events-none {
+  pointer-events: none;
+}
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.sticky {
+  position: sticky;
+}
+.inset-0 {
+  inset: 0px;
+}
+.bottom-5 {
+  bottom: 1.25rem;
+}
+.bottom-full {
+  bottom: 100%;
+}
+.left-0 {
+  left: 0px;
+}
+.left-1\/2 {
+  left: 50%;
+}
+.left-3 {
+  left: 0.75rem;
+}
+.right-1 {
+  right: 0.25rem;
+}
+.right-3 {
+  right: 0.75rem;
+}
+.right-5 {
+  right: 1.25rem;
+}
+.top-0 {
+  top: 0px;
+}
+.top-1 {
+  top: 0.25rem;
+}
+.top-1\/2 {
+  top: 50%;
+}
+.top-full {
+  top: 100%;
+}
+.z-30 {
+  z-index: 30;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.z-\[100\] {
+  z-index: 100;
+}
+.z-\[60\] {
+  z-index: 60;
+}
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.-mb-px {
+  margin-bottom: -1px;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-1\.5 {
+  margin-bottom: 0.375rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-2\.5 {
+  margin-bottom: 0.625rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-2\.5 {
+  margin-top: 0.625rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.table {
+  display: table;
+}
+.grid {
+  display: grid;
+}
+.contents {
+  display: contents;
+}
+.hidden {
+  display: none;
+}
+.h-1 {
+  height: 0.25rem;
+}
+.h-1\.5 {
+  height: 0.375rem;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-14 {
+  height: 3.5rem;
+}
+.h-2 {
+  height: 0.5rem;
+}
+.h-2\.5 {
+  height: 0.625rem;
+}
+.h-3 {
+  height: 0.75rem;
+}
+.h-3\.5 {
+  height: 0.875rem;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-5 {
+  height: 1.25rem;
+}
+.h-6 {
+  height: 1.5rem;
+}
+.h-7 {
+  height: 1.75rem;
+}
+.h-8 {
+  height: 2rem;
+}
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+.max-h-48 {
+  max-height: 12rem;
+}
+.max-h-64 {
+  max-height: 16rem;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.w-0\.5 {
+  width: 0.125rem;
+}
+.w-1\.5 {
+  width: 0.375rem;
+}
+.w-1\/2 {
+  width: 50%;
+}
+.w-10 {
+  width: 2.5rem;
+}
+.w-12 {
+  width: 3rem;
+}
+.w-16 {
+  width: 4rem;
+}
+.w-2 {
+  width: 0.5rem;
+}
+.w-2\.5 {
+  width: 0.625rem;
+}
+.w-3 {
+  width: 0.75rem;
+}
+.w-3\.5 {
+  width: 0.875rem;
+}
+.w-3\/4 {
+  width: 75%;
+}
+.w-32 {
+  width: 8rem;
+}
+.w-4 {
+  width: 1rem;
+}
+.w-5 {
+  width: 1.25rem;
+}
+.w-56 {
+  width: 14rem;
+}
+.w-6 {
+  width: 1.5rem;
+}
+.w-64 {
+  width: 16rem;
+}
+.w-7 {
+  width: 1.75rem;
+}
+.w-8 {
+  width: 2rem;
+}
+.w-80 {
+  width: 20rem;
+}
+.w-full {
+  width: 100%;
+}
+.min-w-0 {
+  min-width: 0px;
+}
+.min-w-48 {
+  min-width: 12rem;
+}
+.max-w-\[calc\(100vw-2\.5rem\)\] {
+  max-width: calc(100vw - 2.5rem);
+}
+.max-w-lg {
+  max-width: 32rem;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[-90deg\] {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@keyframes fade-in {
+
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+@keyframes pulse {
+
+  50% {
+    opacity: .5;
+  }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse-ring {
+
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+.animate-pulse-ring {
+  animation: pulse-ring 1.8s ease-in-out infinite;
+}
+@keyframes scale-in {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+@keyframes slide-in-right {
+
+  0% {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-text {
+  cursor: text;
+}
+.resize-none {
+  resize: none;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-1 {
+  gap: 0.25rem;
+}
+.gap-1\.5 {
+  gap: 0.375rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+.gap-3 {
+  gap: 0.75rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-5 {
+  gap: 1.25rem;
+}
+.gap-6 {
+  gap: 1.5rem;
+}
+.space-y-0\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.125rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.125rem * var(--tw-space-y-reverse));
+}
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-2\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.625rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-visible {
+  overflow: visible;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.break-all {
+  word-break: break-all;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.rounded-md {
+  border-radius: 0.375rem;
+}
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+.rounded-r-full {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+.border {
+  border-width: 1px;
+}
+.border-2 {
+  border-width: 2px;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+.border-l {
+  border-left-width: 1px;
+}
+.border-l-2 {
+  border-left-width: 2px;
+}
+.border-r {
+  border-right-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
+}
+.border-dashed {
+  border-style: dashed;
+}
+.border-amber-500\/20 {
+  border-color: rgb(245 158 11 / 0.2);
+}
+.border-amber-500\/30 {
+  border-color: rgb(245 158 11 / 0.3);
+}
+.border-amber-500\/40 {
+  border-color: rgb(245 158 11 / 0.4);
+}
+.border-emerald-500\/20 {
+  border-color: rgb(16 185 129 / 0.2);
+}
+.border-emerald-500\/30 {
+  border-color: rgb(16 185 129 / 0.3);
+}
+.border-emerald-500\/40 {
+  border-color: rgb(16 185 129 / 0.4);
+}
+.border-indigo-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(99 102 241 / var(--tw-border-opacity, 1));
+}
+.border-indigo-500\/20 {
+  border-color: rgb(99 102 241 / 0.2);
+}
+.border-indigo-500\/30 {
+  border-color: rgb(99 102 241 / 0.3);
+}
+.border-indigo-500\/40 {
+  border-color: rgb(99 102 241 / 0.4);
+}
+.border-indigo-500\/50 {
+  border-color: rgb(99 102 241 / 0.5);
+}
+.border-rose-500\/30 {
+  border-color: rgb(244 63 94 / 0.3);
+}
+.border-rose-500\/40 {
+  border-color: rgb(244 63 94 / 0.4);
+}
+.border-transparent {
+  border-color: transparent;
+}
+.border-white\/30 {
+  border-color: rgb(255 255 255 / 0.3);
+}
+.border-zinc-500\/30 {
+  border-color: rgb(113 113 122 / 0.3);
+}
+.border-zinc-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 91 / var(--tw-border-opacity, 1));
+}
+.border-zinc-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(63 63 70 / var(--tw-border-opacity, 1));
+}
+.border-zinc-700\/50 {
+  border-color: rgb(63 63 70 / 0.5);
+}
+.border-zinc-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(39 39 42 / var(--tw-border-opacity, 1));
+}
+.border-zinc-800\/50 {
+  border-color: rgb(39 39 42 / 0.5);
+}
+.border-t-white {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+.bg-amber-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 158 11 / var(--tw-bg-opacity, 1));
+}
+.bg-amber-500\/10 {
+  background-color: rgb(245 158 11 / 0.1);
+}
+.bg-amber-500\/20 {
+  background-color: rgb(245 158 11 / 0.2);
+}
+.bg-amber-500\/5 {
+  background-color: rgb(245 158 11 / 0.05);
+}
+.bg-black\/50 {
+  background-color: rgb(0 0 0 / 0.5);
+}
+.bg-emerald-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 211 153 / var(--tw-bg-opacity, 1));
+}
+.bg-emerald-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+}
+.bg-emerald-500\/10 {
+  background-color: rgb(16 185 129 / 0.1);
+}
+.bg-emerald-500\/20 {
+  background-color: rgb(16 185 129 / 0.2);
+}
+.bg-emerald-500\/5 {
+  background-color: rgb(16 185 129 / 0.05);
+}
+.bg-emerald-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1));
+}
+.bg-indigo-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(129 140 248 / var(--tw-bg-opacity, 1));
+}
+.bg-indigo-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
+}
+.bg-indigo-500\/10 {
+  background-color: rgb(99 102 241 / 0.1);
+}
+.bg-indigo-500\/20 {
+  background-color: rgb(99 102 241 / 0.2);
+}
+.bg-indigo-500\/5 {
+  background-color: rgb(99 102 241 / 0.05);
+}
+.bg-indigo-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
+}
+.bg-rose-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity, 1));
+}
+.bg-rose-500\/10 {
+  background-color: rgb(244 63 94 / 0.1);
+}
+.bg-rose-500\/15 {
+  background-color: rgb(244 63 94 / 0.15);
+}
+.bg-rose-500\/20 {
+  background-color: rgb(244 63 94 / 0.2);
+}
+.bg-rose-500\/5 {
+  background-color: rgb(244 63 94 / 0.05);
+}
+.bg-rose-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 29 72 / var(--tw-bg-opacity, 1));
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-zinc-500\/10 {
+  background-color: rgb(113 113 122 / 0.1);
+}
+.bg-zinc-700\/30 {
+  background-color: rgb(63 63 70 / 0.3);
+}
+.bg-zinc-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1));
+}
+.bg-zinc-800\/50 {
+  background-color: rgb(39 39 42 / 0.5);
+}
+.bg-zinc-800\/60 {
+  background-color: rgb(39 39 42 / 0.6);
+}
+.bg-zinc-800\/80 {
+  background-color: rgb(39 39 42 / 0.8);
+}
+.bg-zinc-900\/40 {
+  background-color: rgb(24 24 27 / 0.4);
+}
+.bg-zinc-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 9 11 / var(--tw-bg-opacity, 1));
+}
+.bg-zinc-950\/30 {
+  background-color: rgb(9 9 11 / 0.3);
+}
+.bg-zinc-950\/40 {
+  background-color: rgb(9 9 11 / 0.4);
+}
+.bg-zinc-950\/50 {
+  background-color: rgb(9 9 11 / 0.5);
+}
+.bg-zinc-950\/60 {
+  background-color: rgb(9 9 11 / 0.6);
+}
+.bg-zinc-950\/80 {
+  background-color: rgb(9 9 11 / 0.8);
+}
+.bg-zinc-950\/90 {
+  background-color: rgb(9 9 11 / 0.9);
+}
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+.from-indigo-500 {
+  --tw-gradient-from: #6366f1 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(99 102 241 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-indigo-700 {
+  --tw-gradient-to: #4338ca var(--tw-gradient-to-position);
+}
+.to-purple-600 {
+  --tw-gradient-to: #9333ea var(--tw-gradient-to-position);
+}
+.fill-emerald-400 {
+  fill: #34d399;
+}
+.fill-zinc-200 {
+  fill: #e4e4e7;
+}
+.fill-zinc-400 {
+  fill: #a1a1aa;
+}
+.fill-zinc-500 {
+  fill: #71717a;
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.p-1\.5 {
+  padding: 0.375rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.p-3\.5 {
+  padding: 0.875rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-5 {
+  padding: 1.25rem;
+}
+.p-6 {
+  padding: 1.5rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.px-1\.5 {
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-px {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.pl-12 {
+  padding-left: 3rem;
+}
+.pl-9 {
+  padding-left: 2.25rem;
+}
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.pt-24 {
+  padding-top: 6rem;
+}
+.pt-4 {
+  padding-top: 1rem;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.font-mono {
+  font-family: JetBrains Mono, ui-monospace, SFMono-Regular, monospace;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-\[10px\] {
+  font-size: 10px;
+}
+.text-\[11px\] {
+  font-size: 11px;
+}
+.text-\[9px\] {
+  font-size: 9px;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.leading-relaxed {
+  line-height: 1.625;
+}
+.leading-snug {
+  line-height: 1.375;
+}
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.text-amber-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
+.text-emerald-400 {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+}
+.text-indigo-400 {
+  --tw-text-opacity: 1;
+  color: rgb(129 140 248 / var(--tw-text-opacity, 1));
+}
+.text-rose-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity, 1));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.text-zinc-100 {
+  --tw-text-opacity: 1;
+  color: rgb(244 244 245 / var(--tw-text-opacity, 1));
+}
+.text-zinc-200 {
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+}
+.text-zinc-300 {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity, 1));
+}
+.text-zinc-400 {
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity, 1));
+}
+.text-zinc-500 {
+  --tw-text-opacity: 1;
+  color: rgb(113 113 122 / var(--tw-text-opacity, 1));
+}
+.text-zinc-600 {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-text-opacity, 1));
+}
+.text-zinc-700 {
+  --tw-text-opacity: 1;
+  color: rgb(63 63 70 / var(--tw-text-opacity, 1));
+}
+.text-zinc-800 {
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity, 1));
+}
+.placeholder-zinc-600::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-placeholder-opacity, 1));
+}
+.placeholder-zinc-600::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-placeholder-opacity, 1));
+}
+.accent-emerald-500 {
+  accent-color: #10b981;
+}
+.accent-indigo-500 {
+  accent-color: #6366f1;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_0_6px\] {
+  --tw-shadow: 0 0 6px;
+  --tw-shadow-colored: 0 0 6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-emerald-400\/50 {
+  --tw-shadow-color: rgb(52 211 153 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.shadow-indigo-500\/20 {
+  --tw-shadow-color: rgb(99 102 241 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.shadow-indigo-600\/20 {
+  --tw-shadow-color: rgb(79 70 229 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-blur-xl {
+  --tw-backdrop-blur: blur(24px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-100 {
+  transition-duration: 100ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+.duration-500 {
+  transition-duration: 500ms;
+}
+.duration-700 {
+  transition-duration: 700ms;
+}
+.bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+.light .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+  }
+.hover\:border-zinc-700:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(63 63 70 / var(--tw-border-opacity, 1));
+}
+.hover\:bg-emerald-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-indigo-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-rose-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-zinc-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-zinc-800\/20:hover {
+  background-color: rgb(39 39 42 / 0.2);
+}
+.hover\:bg-zinc-800\/40:hover {
+  background-color: rgb(39 39 42 / 0.4);
+}
+.hover\:bg-zinc-800\/50:hover {
+  background-color: rgb(39 39 42 / 0.5);
+}
+.hover\:text-zinc-200:hover {
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+}
+.hover\:text-zinc-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity, 1));
+}
+.disabled\:opacity-60:disabled {
+  opacity: 0.6;
+}
+.group:hover .group-hover\:scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.group\/tt:hover .group-hover\/tt\:opacity-100 {
+  opacity: 1;
+}
+@media (min-width: 640px) {
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px) {
+
+  .md\:flex {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+
+  .lg\:col-span-12 {
+    grid-column: span 12 / span 12;
+  }
+
+  .lg\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .lg\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+
+  .xl\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .xl\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .xl\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .xl\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+</style></head>
+  <body>
+    <div id="root"><div class="flex min-h-screen bg-zinc-950 bg-grid"><aside class="w-64 shrink-0 border-r border-zinc-800 bg-zinc-950/80 backdrop-blur-xl flex flex-col transition-all duration-300 h-screen sticky top-0 z-40"><div class="h-14 flex items-center gap-2.5 px-4 border-b border-zinc-800 shrink-0"><div class="w-8 h-8 rounded-md bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center shrink-0 shadow-lg shadow-indigo-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4.5 h-4.5 text-white"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div><div class="flex-1 min-w-0 animate-fade-in"><div class="flex items-center gap-2"><span class="text-sm font-semibold text-zinc-100 tracking-tight">ControlPlane</span><span class="text-[10px] font-bold text-indigo-400">.ai</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="text-[9px] px-1.5 py-px rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium tabular">v2.4 Production</span></div></div><button class="text-zinc-500 hover:text-zinc-300 transition-colors p-1 rounded hover:bg-zinc-800/50"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left w-4 h-4 transition-transform "><path d="m15 18-6-6 6-6"></path></svg></button></div><div class="px-3 py-3 border-b border-zinc-800 relative"><button class="w-full surface px-3 py-2 flex items-center gap-2 text-left hover:border-zinc-700 transition-colors"><div class="w-2 h-2 rounded-full bg-emerald-400 shrink-0 shadow-[0_0_6px] shadow-emerald-400/50"></div><div class="flex-1 min-w-0"><div class="text-xs font-medium text-zinc-200 truncate">Acme Corp</div><div class="text-[10px] text-zinc-500 truncate">Production (AWS us-east-1)</div></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-3.5 h-3.5 text-zinc-500 transition-transform "><path d="m6 9 6 6 6-6"></path></svg></button></div><nav class="flex-1 px-2 py-3 space-y-0.5 overflow-y-auto"><button class="w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-all relative group bg-zinc-800/80 text-zinc-100 "><span class="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 bg-indigo-400 rounded-r-full"></span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal w-4 h-4 shrink-0 text-indigo-400"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg><span class="flex-1 text-left truncate">Live Proxy Sandbox</span></button><button class="w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-all relative group text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/40 "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity w-4 h-4 shrink-0 "><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg><span class="flex-1 text-left truncate">Observability &amp; Metrics</span></button><button class="w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-all relative group text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/40 "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert w-4 h-4 shrink-0 "><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg><span class="flex-1 text-left truncate">Governance &amp; Policies</span></button><button class="w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-all relative group text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/40 "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-check w-4 h-4 shrink-0 "><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg><span class="flex-1 text-left truncate">Human Review Queue</span><span class="badge bg-rose-500/15 text-rose-400 border-rose-500/30 px-1.5 py-px text-[10px] font-semibold tabular">3</span></button><button class="w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-all relative group text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/40 "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-spreadsheet w-4 h-4 shrink-0 "><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M8 13h2"></path><path d="M14 13h2"></path><path d="M8 17h2"></path><path d="M14 17h2"></path></svg><span class="flex-1 text-left truncate">Audit Logs &amp; Compliance</span></button></nav><div class="px-3 py-3 border-t border-zinc-800 space-y-2 shrink-0"><div class="surface px-3 py-2 animate-fade-in"><div class="flex items-center gap-1.5 text-[10px] text-zinc-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle w-2 h-2 fill-emerald-400 text-emerald-400 animate-pulse-ring"><circle cx="12" cy="12" r="10"></circle></svg><span class="tabular">Proxy Latency: 11.4ms</span></div><div class="text-[10px] text-zinc-500 mt-0.5">All Engines Healthy</div></div><div class="flex items-center gap-2"><button title="Toggle theme" class="p-1.5 rounded-md text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800/50 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-4 h-4"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button><div class="flex items-center gap-2 flex-1 min-w-0 surface px-2 py-1.5"><div class="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-[10px] font-semibold text-white shrink-0">AK</div><div class="flex-1 min-w-0"><div class="text-[11px] text-zinc-200 truncate">Alex Kim</div><div class="text-[9px] text-zinc-500 truncate">Platform Admin</div></div></div></div></div></aside><div class="flex-1 flex flex-col min-w-0"><header class="h-14 border-b border-zinc-800 bg-zinc-950/60 backdrop-blur-xl sticky top-0 z-30 flex items-center gap-4 px-5"><div class="min-w-0"><h1 class="text-sm font-semibold text-zinc-100 truncate">Live Proxy Sandbox</h1><p class="text-[11px] text-zinc-500 truncate">Interactive inference pipeline simulator</p></div><div class="flex-1"></div><button class="hidden sm:flex items-center gap-2 input-base px-3 py-1.5 w-56 hover:border-zinc-700 cursor-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search w-3.5 h-3.5 text-zinc-500"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="text-xs text-zinc-500">Search…</span><kbd class="ml-auto text-[9px] text-zinc-600 border border-zinc-700 rounded px-1 py-px font-mono">⌘K</kbd></button><div class="badge bg-emerald-500/10 text-emerald-400 border-emerald-500/30 hidden md:flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle w-1.5 h-1.5 fill-emerald-400 text-emerald-400"><circle cx="12" cy="12" r="10"></circle></svg>Production</div><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition-colors shadow-lg shadow-indigo-600/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-3.5 h-3.5"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>Simulate Request</button></header><main class="flex-1 p-5 overflow-x-hidden"><div class="grid grid-cols-1 xl:grid-cols-12 gap-4 h-full"><div class="xl:col-span-3 space-y-4"><div class="surface p-4"><div class="flex items-center gap-2 mb-3"><div class="w-6 h-6 rounded bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-3.5 h-3.5 text-indigo-400"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></div><h2 class="text-sm font-semibold text-zinc-100">Client Request</h2></div><label class="text-[10px] uppercase tracking-wider text-zinc-500 font-medium">Use Case Profile</label><div class="mt-1.5 space-y-1.5"><button class="w-full text-left px-3 py-2 rounded-md border text-xs transition-all border-indigo-500/50 bg-indigo-500/10 text-zinc-100"><div class="font-medium">Customer-Facing Support Bot</div><div class="text-[10px] text-zinc-500 mt-0.5">High Risk</div></button><button class="w-full text-left px-3 py-2 rounded-md border text-xs transition-all border-zinc-800 bg-zinc-950/30 text-zinc-400 hover:border-zinc-700"><div class="font-medium">Internal Knowledge Copilot</div><div class="text-[10px] text-zinc-500 mt-0.5">Medium Risk</div></button><button class="w-full text-left px-3 py-2 rounded-md border text-xs transition-all border-zinc-800 bg-zinc-950/30 text-zinc-400 hover:border-zinc-700"><div class="font-medium">Decision-Support Agent</div><div class="text-[10px] text-zinc-500 mt-0.5">Zero Tolerance</div></button></div></div><div class="surface p-4"><label class="text-[10px] uppercase tracking-wider text-zinc-500 font-medium">Foundation Model</label><div class="mt-1.5 grid grid-cols-1 gap-1.5"><button class="flex items-center gap-2 px-3 py-2 rounded-md border text-xs transition-all border-zinc-600 bg-zinc-800/50 text-zinc-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu w-3.5 h-3.5 shrink-0"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg><span class="font-medium">GPT-4o</span><span class="text-[10px] text-zinc-500 ml-auto tabular">128K</span></button><button class="flex items-center gap-2 px-3 py-2 rounded-md border text-xs transition-all border-zinc-800 bg-zinc-950/30 text-zinc-400 hover:border-zinc-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu w-3.5 h-3.5 shrink-0"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg><span class="font-medium">Claude 3.5 Sonnet</span><span class="text-[10px] text-zinc-500 ml-auto tabular">200K</span></button><button class="flex items-center gap-2 px-3 py-2 rounded-md border text-xs transition-all border-zinc-800 bg-zinc-950/30 text-zinc-400 hover:border-zinc-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu w-3.5 h-3.5 shrink-0"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg><span class="font-medium">Llama-3-70B</span><span class="text-[10px] text-zinc-500 ml-auto tabular">8K</span></button></div></div><div class="surface p-4"><label class="text-[10px] uppercase tracking-wider text-zinc-500 font-medium">Quick Test Scenarios</label><div class="mt-1.5 grid grid-cols-1 gap-1.5"><button class="flex items-center gap-2 px-3 py-2 rounded-md border text-xs transition-all text-left border-zinc-800 bg-zinc-950/30 text-zinc-400 hover:border-zinc-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-3 h-3 shrink-0 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg><div class="min-w-0"><div class="font-medium truncate">PII &amp; Injection Attack</div><div class="text-[10px] text-zinc-500 truncate">Attempt to leak employee SSN and bypass system instructions.</div></div></button><button class="flex items-center gap-2 px-3 py-2 rounded-md border text-xs transition-all text-left border-zinc-800 bg-zinc-950/30 text-zinc-400 hover:border-zinc-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-3 h-3 shrink-0 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg><div class="min-w-0"><div class="font-medium truncate">Ungrounded Hallucination</div><div class="text-[10px] text-zinc-500 truncate">Legal contract query generating fabricated clauses.</div></div></button><button class="flex items-center gap-2 px-3 py-2 rounded-md border text-xs transition-all text-left border-zinc-800 bg-zinc-950/30 text-zinc-400 hover:border-zinc-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-3 h-3 shrink-0 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg><div class="min-w-0"><div class="font-medium truncate">Cached High-Frequency FAQ</div><div class="text-[10px] text-zinc-500 truncate">Standard enterprise onboarding query.</div></div></button><button class="flex items-center gap-2 px-3 py-2 rounded-md border text-xs transition-all text-left border-zinc-800 bg-zinc-950/30 text-zinc-400 hover:border-zinc-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-3 h-3 shrink-0 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg><div class="min-w-0"><div class="font-medium truncate">Compliant Analytical Request</div><div class="text-[10px] text-zinc-500 truncate">Valid financial summary prompt.</div></div></button></div></div><div class="surface p-4"><label class="text-[10px] uppercase tracking-wider text-zinc-500 font-medium">Prompt Input</label><textarea rows="5" placeholder="Type or load a test scenario…" class="input-base w-full mt-1.5 px-3 py-2 resize-none text-xs leading-relaxed"></textarea><button class="w-full mt-2.5 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md bg-indigo-600 hover:bg-indigo-500 disabled:opacity-60 text-white text-xs font-semibold transition-colors shadow-lg shadow-indigo-600/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send w-3.5 h-3.5"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>Send Through Proxy</button></div></div><div class="xl:col-span-5 space-y-3"><div class="flex items-center gap-2 mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gauge w-4 h-4 text-indigo-400"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg><h2 class="text-sm font-semibold text-zinc-100">3-Engine Inspection Pipeline</h2></div><div class="surface p-3.5 card-hover transition-all "><div class="flex items-center gap-2.5 mb-2.5"><div class="w-7 h-7 rounded-md border flex items-center justify-center shrink-0 border-rose-500/30 bg-rose-500/5 text-rose-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-3.5 h-3.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="text-[10px] text-zinc-600 font-mono">01</span><span class="text-sm font-semibold text-zinc-100">Responsibility Engine</span></div><div class="text-[10px] text-zinc-500">PII &amp; Jailbreak Detection</div></div></div><div class="pl-9"><p class="text-xs text-zinc-600 py-2">Awaiting request…</p></div></div><div class="flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4 text-zinc-700 rotate-90"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div><div class="surface p-3.5 card-hover transition-all "><div class="flex items-center gap-2.5 mb-2.5"><div class="w-7 h-7 rounded-md border flex items-center justify-center shrink-0 border-emerald-500/30 bg-emerald-500/5 text-emerald-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign w-3.5 h-3.5"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="text-[10px] text-zinc-600 font-mono">02</span><span class="text-sm font-semibold text-zinc-100">Cost Engine</span></div><div class="text-[10px] text-zinc-500">Semantic Cache &amp; Model Tiering</div></div></div><div class="pl-9"><p class="text-xs text-zinc-600 py-2">Awaiting request…</p></div></div><div class="flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4 text-zinc-700 rotate-90"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div><div class="surface p-3.5 card-hover transition-all "><div class="flex items-center gap-2.5 mb-2.5"><div class="w-7 h-7 rounded-md border flex items-center justify-center shrink-0 border-indigo-500/30 bg-indigo-500/5 text-indigo-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gauge w-3.5 h-3.5"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="text-[10px] text-zinc-600 font-mono">03</span><span class="text-sm font-semibold text-zinc-100">Performance Engine</span></div><div class="text-[10px] text-zinc-500">SLM Grounding &amp; Faithfulness</div></div></div><div class="pl-9"><p class="text-xs text-zinc-600 py-2">Awaiting request…</p></div></div><div class="mt-4"><div class="rounded-lg border-2 border-dashed border-zinc-800 p-4 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-5 h-5 text-zinc-700 mx-auto mb-1"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg><p class="text-xs text-zinc-600">Final action will appear here after inspection</p></div></div></div><div class="xl:col-span-4 space-y-4"><div class="surface p-4"><div class="flex items-center gap-2 mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text w-3.5 h-3.5 text-indigo-400"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><h3 class="text-xs font-semibold text-zinc-200 uppercase tracking-wider">Sanitized Output</h3></div><div class="bg-zinc-950/30 border border-dashed border-zinc-800 rounded-md p-6 text-center text-xs text-zinc-600">No output yet</div></div><div class="surface p-4"><div class="flex items-center gap-2 mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-3.5 h-3.5 text-indigo-400"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><h3 class="text-xs font-semibold text-zinc-200 uppercase tracking-wider">Latency Breakdown</h3></div><p class="text-xs text-zinc-600 py-2">Run a request to see latency</p></div><div class="surface p-4"><div class="flex items-center gap-2 mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-emerald-400"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><h3 class="text-xs font-semibold text-zinc-200 uppercase tracking-wider">Token &amp; Cost Impact</h3></div><p class="text-xs text-zinc-600 py-2">Run a request to see savings</p></div></div></div></main></div></div><div class="fixed bottom-5 right-5 z-[100] flex flex-col gap-2 w-80 max-w-[calc(100vw-2.5rem)]"></div></div>
+    <script type="module" src="./main.tsx"></script>
+  
+
+<style>@font-face {font-family: Inter-NjBkMDQwOTZj; font-weight: 600; src: url(data:font/woff2;base64,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) format("woff2");} @font-face {font-family: Inter-NjBkMDQwOTZj; font-weight: 500; src: url(data:font/woff2;base64,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) format("woff2");}</style><div style="position: fixed; bottom: 1rem; right: 1rem; z-index: 2147483647;"><template shadowrootmode="open"><div style="color-scheme: initial; forced-color-adjust: initial; math-depth: initial; position: initial; position-anchor: initial; text-size-adjust: initial; appearance: initial; font: initial; font-palette: initial; font-synthesis: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; anchor-scope: initial; animation-composition: initial; animation: initial; animation-trigger: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-shape: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-animation: initial; caret-color: initial; caret-shape: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; rule-break: initial; rule: initial; rule-inset: initial; rule-visibility-items: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; corner-shape: initial; corner-block-end-shape: initial; corner-block-start-shape: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; dynamic-range-limit: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; flex-line-count: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interactivity: initial; interest-delay: initial; interpolate-size: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-block: initial; overflow-clip-margin: initial; overflow-inline: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-margin-safety: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; print-color-adjust: initial; quotes: initial; r: initial; reading-flow: initial; reading-order: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-overhang: initial; ruby-position: initial; rule-overlap: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-initial-target: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-marker-group: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-target-group: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-autospace: initial; text-box: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-fit: initial; text-indent: initial; text-justify: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; timeline-trigger: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; trigger-scope: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-group: initial; view-transition-name: initial; view-transition-scope: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: initial; color: black;"><div class="badge" style="border-radius: 8px; border: 1px solid rgb(225, 242, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; font-size: 16px; font-weight: 600; padding: 8px 16px 8px 12px; background: white; font-family: Inter-NjBkMDQwOTZj; display: flex; align-items: center; cursor: default; scale: 0.8; color: inherit; text-decoration: inherit;"><svg style="width: 24px; height: 24px; padding-right: 4px;"><g style="mix-blend-mode:difference">       <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3276 19.9235C11.8345 19.9235 10.3686 19.3808 9.52704 18.2141L9.23021 19.5901L3.75 22.5L4.34161 19.5901L8.33258 1.5H13.219L11.8074 7.87631C12.9475 6.62818 14.0063 6.16692 15.3636 6.16692C18.2954 6.16692 20.25 8.09338 20.25 11.6207C20.25 15.2566 17.9968 19.9235 13.3276 19.9235ZM15.2007 12.6518C15.2007 14.334 14.0062 15.6093 12.4589 15.6093C11.5902 15.6093 10.8029 15.2837 10.2871 14.7139L11.0473 11.3765C11.6173 10.8067 12.2689 10.4811 13.029 10.4811C14.1963 10.4811 15.2007 11.3494 15.2007 12.6518Z" fill="white"></path>     </g></svg><span>Made in Bolt</span></div><div class="dialog" style="display: none; padding: 6px 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; background: rgb(248, 248, 248); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 6px; font-family: Inter-NjBkMDQwOTZj; font-weight: 500; position: absolute; bottom: 44px; right: 0px; width: 230px; font-size: 13px;">
+      <p style="margin: 0 0 7px; padding: 0;">
+        This badge will be visible when you publish the site.
+      </p>
+      Upgrade to the <a href="https://bolt.new/pricing" target="_blank" style="color: #1488FC; font-weight: bold;">Pro plan</a> to remove it.<div style="position: absolute; bottom: -6px; right: 70px; width: 0px; height: 0px; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid rgb(248, 248, 248); z-index: 2;"></div><div style="position: absolute; bottom: -7px; right: 69px; width: 0px; height: 0px; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 7px solid rgba(0, 0, 0, 0.1); z-index: 1;"></div></div></div><style></style></template></div></body></html>
