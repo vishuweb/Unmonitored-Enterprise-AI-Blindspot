@@ -190,11 +190,18 @@ When a request is submitted in `src/pages/SandboxPage.tsx`, the orchestrator in 
 ## Project Structure & File Map
 
 ```text
+├── .gitignore                           # Git ignore rules (node_modules, dist, .env, IDE files, OS files)
 ├── package.json                         # Project dependencies, build scripts, and metadata
-├── vite.config.ts                       # Vite bundler configuration
+├── vite.config.ts                       # Vite bundler config with /api proxy to backend server
 ├── tsconfig.json                        # Strict TypeScript compiler options
+├── tsconfig.node.json                   # TypeScript config for Vite/Node tooling
 ├── tailwind.config.js                   # Custom dark enterprise palette and utility classes
+├── postcss.config.js                    # PostCSS config (Tailwind + Autoprefixer)
 ├── index.html                           # Single-page app HTML entry point
+│
+├── server/
+│   └── index.ts                         # Express backend: REST API gateway (health, proxy, policies, reviews, audit, metrics)
+│
 └── src/
     ├── main.tsx                         # React 18 bootstrap with ControlPlaneProvider wrapper
     ├── App.tsx                          # App shell rendering layout, header, demo banner, and active tab
@@ -212,8 +219,11 @@ When a request is submitted in `src/pages/SandboxPage.tsx`, the orchestrator in 
     │   ├── defaultPolicies.ts           # 7 default enterprise governance rules and thresholds
     │   └── scenarios.ts                 # 8 preset scenarios covering compliant, attack, PII, and cache queries
     │
+    ├── services/
+    │   └── api.ts                       # API client abstraction for backend endpoints (with offline fallback)
+    │
     ├── context/
-    │   ├── ControlPlaneContext.tsx      # Unified React State Context with localStorage persistence
+    │   ├── ControlPlaneContext.tsx      # Unified React State Context with backend sync + localStorage fallback
     │   └── seedData.ts                  # Seed telemetry runtime events and initial human review queue items
     │
     ├── components/
@@ -311,11 +321,40 @@ Core data models are defined in `src/types/index.ts`:
 npm install
 ```
 
-### Development Server
+### Frontend Development Server
 ```bash
 npm run dev
 ```
 Opens the local development server at `http://localhost:5173`.
+
+The frontend works standalone with client-side engines and `localStorage` persistence. For full-stack mode with the backend API, also start the backend server (see below).
+
+### Backend API Server (Optional)
+```bash
+npm run server
+```
+Starts the Express REST API gateway on `http://localhost:3001`. The Vite dev server automatically proxies all `/api/*` requests to this backend.
+
+**API Endpoints:**
+| Endpoint | Method | Purpose |
+| :--- | :--- | :--- |
+| `/api/health` | GET | Gateway health check, version, and active policy count |
+| `/api/scenarios` | GET | List all 8 preset evaluation scenarios |
+| `/api/proxy/evaluate` | POST | Execute prompt through the 3-engine runtime pipeline |
+| `/api/policies` | GET/POST | List or create governance policies |
+| `/api/policies/:id` | PUT | Update a policy |
+| `/api/policies/:id/status` | PATCH | Toggle policy active/draft status |
+| `/api/reviews` | GET | List Human Review queue items |
+| `/api/reviews/:id/action` | POST | Approve, reject, or edit a review item |
+| `/api/events` | GET | List all audit events |
+| `/api/events/export/json` | GET | Download audit log as JSON |
+| `/api/events/export/csv` | GET | Download audit log as CSV |
+| `/api/metrics` | GET | Aggregated operational metrics |
+
+### Type Checking
+```bash
+npm run typecheck
+```
 
 ### Production Build
 ```bash
