@@ -1,5 +1,8 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import { existsSync } from 'fs';
 import { AggregatedMetrics, PolicyRule, ReviewQueueItem } from '../src/types';
 import { RuntimePipeline } from '../src/engine/runtimePipeline';
 import { ControlPlaneRepository } from './repository';
@@ -237,6 +240,18 @@ app.get('/api/events/export/csv', (_req: Request, res: Response) => {
 app.get('/api/metrics', (_req: Request, res: Response) => {
   res.json(calculateMetrics());
 });
+
+// Serve built React frontend in production
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const distPath = join(__dirname, '../dist');
+
+if (existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get('*', (_req, res) => {
+    res.sendFile(join(distPath, 'index.html'));
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`[ControlPlane.ai] Runtime Gateway Server active on port ${PORT}${provider ? ` with ${provider.name} provider` : ' without a downstream provider'}`);

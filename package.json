@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "server": "tsx server/index.ts",
+    "start": "node --loader tsx/esm server/index.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
