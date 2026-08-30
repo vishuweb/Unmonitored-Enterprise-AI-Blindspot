@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.sqlite
+*.sqlite-*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary and generated files
+*.download
+*.gz
+*.dump
+*.bak
+
+# Bolt.new browser-save artifacts
+*.js.download
+saved_resource.html
+headless.html
+iframe.*.html
+parsed_stream.json
+s16_dump.txt
