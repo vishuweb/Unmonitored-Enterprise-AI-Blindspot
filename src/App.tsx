@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
 import { Header } from './components/layout/Header';
 import { QuickSearchModal } from './components/layout/QuickSearchModal';
@@ -15,8 +15,13 @@ import { useKeyboardShortcuts, getGlobalShortcuts } from './hooks/useKeyboardSho
 export const App: React.FC = () => {
   const { activeTab, setActiveTab, setIsSearchOpen, approveAllLowRisk } = useControlPlane();
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
+  const [pageKey, setPageKey] = useState(activeTab);
 
-  // Setup keyboard shortcuts
+  // Trigger re-mount animation on tab change
+  useEffect(() => {
+    setPageKey(activeTab);
+  }, [activeTab]);
+
   useKeyboardShortcuts({
     shortcuts: getGlobalShortcuts({
       onOpenSearch: () => setIsSearchOpen(true),
@@ -33,33 +38,35 @@ export const App: React.FC = () => {
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'sandbox':
-        return <SandboxPage />;
-      case 'observability':
-        return <ObservabilityPage />;
-      case 'governance':
-        return <GovernancePage />;
-      case 'review':
-        return <ReviewQueuePage />;
-      case 'audit':
-        return <AuditLogsPage />;
-      case 'architecture':
-        return <ArchitecturePage />;
-      default:
-        return <SandboxPage />;
+      case 'sandbox':       return <SandboxPage />;
+      case 'observability': return <ObservabilityPage />;
+      case 'governance':    return <GovernancePage />;
+      case 'review':        return <ReviewQueuePage />;
+      case 'audit':         return <AuditLogsPage />;
+      case 'architecture':  return <ArchitecturePage />;
+      default:              return <SandboxPage />;
     }
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-zinc-950 text-zinc-100 font-sans">
+    <div className="flex h-screen w-screen overflow-hidden bg-zinc-950 text-zinc-100 font-sans relative">
+      {/* Animated background layer */}
+      <div className="bg-grid" aria-hidden />
+      <div className="bg-orb-1" aria-hidden />
+      <div className="bg-orb-2" aria-hidden />
+      <div className="bg-orb-3" aria-hidden />
+      <div className="scan-overlay" aria-hidden />
+
       {/* Left Sidebar */}
       <Sidebar />
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden relative z-10">
         <Header />
-        <main className="flex-1 overflow-y-auto bg-zinc-950">
-          {renderContent()}
+        <main className="flex-1 overflow-y-auto bg-transparent">
+          <div key={pageKey} className="page-enter h-full">
+            {renderContent()}
+          </div>
         </main>
       </div>
 
