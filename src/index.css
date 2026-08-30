@@ -6,7 +6,8 @@
 
 @layer base {
   body {
-    @apply bg-zinc-950 text-zinc-100 antialiased font-sans;
+    @apply bg-zinc-950 antialiased font-sans;
+    color: #f0f0f2; /* brighter than zinc-100 (#f4f4f5) — almost white */
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
@@ -14,7 +15,22 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  /* Global text brightness boost */
+  /* zinc-400 → lifted to ~zinc-300 brightness */
+  .text-zinc-400 { color: #c4c4cc !important; }
+  /* zinc-500 → lifted to ~zinc-400 brightness */
+  .text-zinc-500 { color: #a8a8b3 !important; }
+  /* zinc-600 → lifted to ~zinc-500 brightness */
+  .text-zinc-600 { color: #8a8a96 !important; }
+  /* zinc-300 stays bright */
+  .text-zinc-300 { color: #dcdce4 !important; }
+  /* zinc-200 near-white */
+  .text-zinc-200 { color: #ededf2 !important; }
+  /* zinc-100 pure bright */
+  .text-zinc-100 { color: #f4f4f8 !important; }
 }
+
 
 /* =============================================
    GLASSMORPHISM SURFACES
