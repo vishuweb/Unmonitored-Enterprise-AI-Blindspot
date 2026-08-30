@@ -248,7 +248,8 @@ const distPath = join(__dirname, '../dist');
 
 if (existsSync(distPath)) {
   app.use(express.static(distPath));
-  app.get('*', (_req, res) => {
+  // Express 5 compatible catch-all for SPA routing
+  app.use((_req, res) => {
     res.sendFile(join(distPath, 'index.html'));
   });
 }
