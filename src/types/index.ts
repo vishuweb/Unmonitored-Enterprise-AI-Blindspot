@@ -20,6 +20,19 @@ export type TargetModel =
   | 'Llama-3-70B (8K)' 
   | 'GPT-4o-mini (128K)';
 
+export interface ScenarioPreset {
+  id: string;
+  title: string;
+  category: string;
+  tag: string;
+  tagColor: string;
+  description: string;
+  application: TargetApplication;
+  model: TargetModel;
+  prompt: string;
+  expectedDecision: GovernanceDecision;
+}
+
 export interface PolicyRule {
   id: string;
   name: string;

@@ -40,6 +40,13 @@ interface ControlPlaneContextType {
   
   // New: Metrics computation
   computeMetrics: () => AggregatedMetrics;
+  
+  // Demo Tour
+  isTourActive: boolean;
+  tourStepIndex: number;
+  nextTourStep: () => void;
+  prevTourStep: () => void;
+  endDemoTour: () => void;
 }
 
 const ControlPlaneContext = createContext<ControlPlaneContextType | undefined>(undefined);
@@ -51,6 +58,12 @@ export const ControlPlaneProvider: React.FC<{ children: ReactNode }> = ({ childr
 
   const [activeTab, setActiveTab] = useState<'sandbox' | 'observability' | 'governance' | 'review' | 'audit' | 'architecture'>('sandbox');
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const [isTourActive, setIsTourActive] = useState<boolean>(false);
+  const [tourStepIndex, setTourStepIndex] = useState<number>(0);
+
+  const nextTourStep = () => setTourStepIndex(prev => Math.min(prev + 1, 7));
+  const prevTourStep = () => setTourStepIndex(prev => Math.max(prev - 1, 0));
+  const endDemoTour = () => { setIsTourActive(false); setTourStepIndex(0); };
 
   // Compute aggregated metrics from runtime events
   const computeMetrics = (): AggregatedMetrics => {
@@ -147,6 +160,13 @@ export const ControlPlaneProvider: React.FC<{ children: ReactNode }> = ({ childr
     setActiveTab,
     isSearchOpen,
     setIsSearchOpen,
+    
+    // Demo Tour
+    isTourActive,
+    tourStepIndex,
+    nextTourStep,
+    prevTourStep,
+    endDemoTour,
   };
 
   return (
